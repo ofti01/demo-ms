@@ -16,7 +16,7 @@ public class LevelController {
 
 
     @GetMapping("/hello")
-    public String getTest(){
+    public String getall(){
         return "hello";
     }
 }
