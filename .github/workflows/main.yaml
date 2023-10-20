@@ -45,7 +45,7 @@ jobs:
         with:
           images: ${{ secrets.DOCKER_USERNAME }}/${{ matrix.image_name }}
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Build and push ${{ matrix.image_name }}
         uses: docker/build-push-action@v4
         with:
