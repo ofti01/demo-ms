@@ -13,4 +13,10 @@ public class LevelController {
     public String getTest(){
         return "new Object";
     }
+
+
+    @GetMapping("/hello")
+    public String getTest(){
+        return "hello";
+    }
 }
