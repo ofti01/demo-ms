@@ -2,7 +2,7 @@ name: build and push microservices
 
 on:
   push:
-    branches-ignore:
+    branches:
       - 1-*
       - feature/*
 env:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Build Jar file
         working-directory: ${{matrix.image_name}}
-        run: mvn clean package -DskipTests
+        run: mvn clean package -DskipTests --file pom.xml
 
       - name: Build the Docker image
         run: docker-compose build --no-cache --force-rm
