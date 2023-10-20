@@ -33,7 +33,7 @@ jobs:
       - name: Dockerize & Push Docker ${{matrix.image_name}}
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
-          context: ${{matrix.image_name}}
+          directory: ${{matrix.image_name}}
           image: ${{secrets.DOCKER_USERNAME}}/${{matrix.image_name}}
           tags: latest
           registry: docker.io
