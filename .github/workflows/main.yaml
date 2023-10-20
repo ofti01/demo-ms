@@ -3,7 +3,7 @@ name: build and push microservices
 on:
   push:
     branches:
-      - feature/*
+      - feature/level-service
 env:
   REGISTRY: docker.io
   REPO_OWNER: ${{ github.repository_owner }}
