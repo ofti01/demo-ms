@@ -3,10 +3,8 @@ name: build and push microservices
 on:
   push:
     branches-ignore:
-      - main
-  pull_request:
-    branches-ignore:
-      - main
+      - 1-*
+      - feature/*
 env:
   REGISTRY: docker.io
   REPO_OWNER: ${{ github.repository_owner }}
