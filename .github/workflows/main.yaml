@@ -27,6 +27,7 @@ jobs:
           cache: 'maven'
 
       - name: Build with Maven
+        working-directory: ${{matrix.image_name}}
         run: mvn -B package --file pom.xml
 
       - name: Dockerize & Push Docker ${{matrix.image_name}}
